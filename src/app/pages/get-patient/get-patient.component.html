@@ -1,0 +1,33 @@
+<div class="col-md-7 offset-md-4 p-5 ">
+
+    <form ngNativeValidate class="row g-3"  (ngSubmit)="onSubmit()">
+        <div class="col-auto">
+            <input type="text" class="form-control" id = "id" placeholder = "Enter Patient ID"
+                [(ngModel)]= "patientId" name="id" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">SEARCH</button>
+        </div>
+      </form>
+</div>
+<div class="container my-3 bg-white p-2 text-dark bg-opacity-75" *ngIf="show">
+    <table class="table table-striped"> 
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>DATE OF Visit</th>
+                <th>Doctor Visited</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td>{{ patient.name}}</td>
+                <td>{{ patient.age}}</td>
+                <td>{{ patient.date}}</td>
+                <td>{{ doctorName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  hospital-managment-frontend:
+    container_name: hospital-managment-frontend
+    build: ./
+    ports:
+      - '9000:80'
+#docker-compose up -d
